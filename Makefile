@@ -1,7 +1,8 @@
 .PHONY: lint test build
 
 inittest:	
-	pip install flake8 pytest
+	pip install flake8 pytest 
+	pip install -e .
 
 lint:
 	flake8
