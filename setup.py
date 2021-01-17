@@ -14,7 +14,7 @@ if m:
 # Package meta-data.
 NAME = "click_require_creds"
 DESCRIPTION = "Click decorator to handle credentials"
-INSTALL_REQUIRES = ["Click>=7.1,<8"]
+INSTALL_REQUIRES = ["Click>=7.1,<8", "nttldict>=0.0.2"]
 
 TESTS_REQUIRE = ["pytest"]
 
