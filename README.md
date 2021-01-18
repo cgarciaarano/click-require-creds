@@ -1,8 +1,8 @@
-# Click decorator to handle creentials
+# Click decorator to handle credentials
 
 This package provides a simple way to handle interactive provided credentials in Click applications.
 
-Additionally, credentials are cached based on a key (usually a username)  
+Additionally, credentials are cached based on a key (usually a username)
 
 ## Install
 
@@ -17,7 +17,7 @@ Minimal example, by default asks for _username_ and _password_ and pass them to 
 
 ```python
 import click
-from click_require_creds import setup, require_creds 
+from click_require_creds import setup, require_creds
 
 setup('my-click-app', default_ttl=800)
 
@@ -31,7 +31,7 @@ But you can use custom parameters:
 
 ```python
 import click
-from click_require_creds import setup, require_creds 
+from click_require_creds import setup, require_creds
 
 setup('my-click-app', default_ttl=800)
 
@@ -45,7 +45,7 @@ You can also set individual TTL cache per command:
 
 ```python
 import click
-from click_require_creds import setup, require_creds 
+from click_require_creds import setup, require_creds
 
 setup('my-click-app', default_ttl=800)
 
@@ -53,13 +53,13 @@ setup('my-click-app', default_ttl=800)
 @require_creds('tokenid', 'secret' ttl=60*60*24)
 def cli(tokenid, secret):
     click.echo(f"Tokenid {tokenid} secret is {secret}")
-``` 
+```
 
 It also possible to pass values as options (e.g. set user as $USER by default, it won't ask for user)
 
 ```python
 import click
-from click_require_creds import setup, require_creds 
+from click_require_creds import setup, require_creds
 
 setup('my-click-app', default_ttl=800)
 
@@ -68,7 +68,7 @@ setup('my-click-app', default_ttl=800)
 @require_creds()
 def cli(username, password):
     click.echo(f"User {username} password is {password}")
-``` 
+```
 
 
 ## Considerations
