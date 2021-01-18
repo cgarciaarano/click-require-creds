@@ -15,7 +15,7 @@ pip install click-require-creds
 
 Minimal example, by default asks for _username_ and _password_ and pass them to the decorated function as parameters. Once the input is cached, it won't ask for credentials until TTL expires.
 
-```
+```python
 import click
 from click_require_creds import setup, require_creds 
 
@@ -29,7 +29,7 @@ def cli(username, password):
 
 But you can use custom parameters:
 
-```
+```python
 import click
 from click_require_creds import setup, require_creds 
 
@@ -43,7 +43,7 @@ def cli(tokenid, secret):
 
 You can also set individual TTL cache per command:
 
-```
+```python
 import click
 from click_require_creds import setup, require_creds 
 
@@ -57,7 +57,7 @@ def cli(tokenid, secret):
 
 It also possible to pass values as options (e.g. set user as $USER by default, it won't ask for user)
 
-```
+```python
 import click
 from click_require_creds import setup, require_creds 
 
